@@ -1,0 +1,31 @@
+{% extends './base.html' %}
+
+{% block content %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="text-center">
+                Edit Cell
+            </h2>
+        </div>
+        <div class="col-12">
+            <form action="" method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <label for="" class="form-label">Enter name: </label>
+                    <input type="text" class="form-control" name="name" value="{{list_text.name}}">
+                </div>
+                <div class="form-group">
+                    <label for="" class="form-label">Enter country:</label>
+                    <input type="text" name="country" value="{{list_text.country}}" class="form-control">
+                </div>
+                <br>
+                <br>
+                <button class="btn btn-secondary" type="Submit">Update</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
